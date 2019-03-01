@@ -1,1 +1,50 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Table the Discussion</title>
+  <script src="https://d3js.org/d3.v5.js"></script>
+</head>
+<body>
+  <h1>My cause: warm, safe, and dry housing.</h1>
+  <p>I spent this past summer working for Appalachia Service Project, a nonprofit with a goal of eradicating 
+    substandard housing in Appalachia. ASP is located in 26 counties in Appalachia. Volunteers - high schoolers 
+    and adults - come to ASP centers for a week and do construction on homes in substandard condition. Those of us
+    who worked for ASP all summer managed the projects. Typical projects
+    include insulation, ramps, room additions, roofs, drywall, painting, floor repair, and more. ASP works to make homes
+    warmer, safer, and drier. This is a cause I feel strongly about because I saw how having a warm, safe, and dry home
+    changed the lives of my homeowners.</p>
+  
+<!--  
+  <script type="text/javascript">   
+    
+var dinnerMaker=function(food, company, place)
+{
+  return{
+    food: food,
+    company: company,
+    place: place
+  }
+}
+var data = [
+  dinnerMaker("Food", "Company", "Place"),
+  dinnerMaker("pizza", "friends", "restaurant"),
+  dinnerMaker("pasta", "Wynnie", "Cowan"),
+  dinnerMaker("soup", "family", "home"),
+  dinnerMaker("dumpling", "Emma", "China")
+];
+    
+var table=d3.select("body").append("table");
+var rows=table.selectAll("tr")
+              .data(data)
+              .enter()
+              .append("tr");
+rows.append("td")
+  .text(function(d){return d.food});
+ 
+rows.append("td")
+  .text(function(d){return d.company});
+ 
+ rows.append("td")
+  .text(function(d){return d.place});
+</script>
