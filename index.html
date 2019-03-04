@@ -9,7 +9,29 @@
   <p>My cause: warm, safe, and dry housing.</p>
 
 <script type="text/javascript">  
-d3.csv("magoffin.csv", function(data){console.log(data);});
+  
+var dataP=d3.csv("magoffin.csv");
+  dataP.then(function(data)
+             { var parsedCSV = d3.csv.parseRows(data);
+
+                var container = d3.select("body")
+                    .append("table")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
+
+                    
+  
+  
+  
+/*d3.csv("magoffin.csv", function(data){console.log(data);});
   
 d3.text("magoffin.csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
@@ -31,9 +53,7 @@ var table=d3.select("body").append("table");
   var rows=table.selectAll("tr")
   .data(data)
   .enter()
-  .append("tr");
-
-                        
+  .append("tr");*/                        
   
   
 rows.append("td")
