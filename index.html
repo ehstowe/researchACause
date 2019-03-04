@@ -12,9 +12,7 @@
   
 var dataP=d3.csv("magoffin.csv");
   dataP.then(function(data)
-             { var parsedCSV = d3.csv.parseRows(data);
-
-                var container = d3.select("body")
+             {var container = d3.select("body")
                     .append("table")
 
                     .selectAll("tr")
