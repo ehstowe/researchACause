@@ -76,8 +76,7 @@
   
   
  
-  </style>
-  
+  </style>  
 <!--  
   <script type="text/javascript">   
     
@@ -110,4 +109,9 @@ rows.append("td")
  
  rows.append("td")
   .text(function(d){return d.place});
-</script>
+</script>-->
+
+<script type="text/javascript">  
+d3.csv("magoffin.csv", function(data){console.log(data);});
+
+  </script>
