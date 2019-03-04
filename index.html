@@ -24,11 +24,7 @@ d3.csv("magoffin.csv", function(data){console.log(data);});
 });
     
   
-var table=d3.select("body").append("table");
-  var rows=table.selectAll("tr")
-  .data(data)
-  .enter()
-  .append("tr")*/
+*/
   
   d3.text("magoffin.csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
@@ -46,5 +42,9 @@ var table=d3.select("body").append("table");
                         .text(function(d) { return d; });
             });
 
-
+var table=d3.select("body").append("table");
+  var rows=table.selectAll("tr")
+  .data(data)
+  .enter()
+  .append("tr")
   </script>
