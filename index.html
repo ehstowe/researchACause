@@ -10,7 +10,7 @@
 
 <script type="text/javascript">  
 d3.csv("magoffin.csv", function(data){console.log(data);});
-  d3.text("magoffin.csv", function(data) {
+  /*d3.text("magoffin.csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
 
                 var container = d3.select("body")
@@ -30,7 +30,15 @@ var table=d3.select("body").append("table");
   var rows=table.selectAll("tr")
   .data(data)
   .enter()
-  .append("tr")
+  .append("tr")*/
+  
+  d3.text("magoffin.csv", function(data){
+    var table=d3.select"body".append("table");
+    var rows=table.selectAll("tr")
+    .data(data)
+    .enter()
+    .append("tr")});
+                        
   
   
 rows.append("td")
