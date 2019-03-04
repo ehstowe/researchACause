@@ -47,6 +47,25 @@ var table=d3.select("body").append("table");
   .data(data)
   .enter()
   .append("tr")
+  
+  
+rows.append("td")
+  .text(function(d){return d.Year});
+ 
+rows.append("td")
+  .text(function(d){return d.Magoffin Co.});
+ 
+ rows.append("td")
+  .text(function(d){return d.Appalachian KY});
+  
+  rows.append("td")
+  .text(function(d){return d.KY});
+  
+  rows.append("td")
+  .text(function(d){return d.Appalachian Region});
+  
+  rows.append("td")
+  .text(function(d){return d.US});
   </script>
   
   <style>
