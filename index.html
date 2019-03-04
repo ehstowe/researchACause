@@ -12,7 +12,7 @@
 d3.csv("magoffin.csv", function(data){console.log(data);});
   
   
-d3.csv("magoffin.csv", function(data) {
+/*d3.csv("magoffin.csv", function(data) {
     for (var i = 0; i < data.length; i++) {
         console.log(data[i].Year);
         console.log(data[i].Magoffin Co.);
@@ -28,7 +28,23 @@ var table=d3.select("body").append("table");
   var rows=table.selectAll("tr")
   .data(data)
   .enter()
-  .append("tr")
+  .append("tr")*/
+  
+  d3.text("magoffin.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+
+                var container = d3.select("body")
+                    .append("table")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
 
 
   </script>
