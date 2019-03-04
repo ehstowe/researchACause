@@ -114,5 +114,14 @@ rows.append("td")
 
 <script type="text/javascript">  
 d3.csv("magoffin.csv", function(data){console.log(data);});
+  
+    
+  
+var table=d3.select("body").append("table");
+  var rows=table.selectAll("tr")
+  .data(data)
+  .enter()
+  .append("tr")
+
 
   </script>
