@@ -11,6 +11,13 @@
 <script type="text/javascript">  
 d3.csv("magoffin.csv", function(data){console.log(data);});
   
+  
+d3.csv("magoffin.csv", function(data) {
+    for (var i = 0; i < data.length; i++) {
+        console.log(data[i].Year);
+        console.log(data[i].Magoffin Co.);
+    }
+});
     
   
 var table=d3.select("body").append("table");
